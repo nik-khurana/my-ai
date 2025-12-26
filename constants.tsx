@@ -1,6 +1,4 @@
 
-import React from 'react';
-
 export const RESUME_DATA = `
 Nikhil Khurana
 Technical Project Manager | Android SME | Software Engineer
