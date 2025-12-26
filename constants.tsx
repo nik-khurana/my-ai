@@ -18,7 +18,6 @@ Technical Project Manager (Contract) | Samsung Electronics America | Oct 2022 - 
 - Orchestrating the integration of 20+ mission-critical carrier applications into regional firmware.
 - Developed a Python-based automation suite that reduced manual firmware verification effort by 80%.
 - Achieved a 50% reduction in resolution time for critical post-launch technical issues.
-- Spearheaded the North American rollout of "Galaxy AI" features, enhancing product visibility and carrier adoption.
 
 Technical Project Manager Intern | Celito Tech Inc | Aug 2021 - Dec 2021
 - Acted as a liaison between biopharma clients and technical teams to define software requirements.
@@ -31,14 +30,10 @@ Software Engineer Intern (Android) | Idea Cellular Ltd | 2017 & 2018
 
 PROJECTS:
 
-1. Galaxy AI Integration (Samsung)
-- Managed the technical roadmap for bringing generative AI features to the North American market.
-- Coordinated between engineering teams and carrier partners to ensure low-latency performance and security compliance.
-
-2. Firmware Automation Engine
+1. Firmware Automation Engine
 - A custom Python framework developed to automate the tracking and validation of carrier-specific app integrations across multiple Android versions (12, 13, 14).
 
-3. BioPharma CRM Dashboard
+2. BioPharma CRM Dashboard
 - Designed a requirement-tracking interface for high-stakes pharmaceutical project management during tenure at Celito.
 
 EDUCATION:
