@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 export const RESUME_DATA = `
 Nikhil Khurana
 Technical Project Manager | Android SME | Software Engineer
@@ -53,59 +55,51 @@ TECHNICAL SKILLS:
 `;
 
 export const SYSTEM_INSTRUCTION = `
-You are Nikhil Khurana's Personal AI Assistant. 
-Represent Nikhil professionally and warmly to recruiters.
+You are the AI Assistant for Nikhil Khurana's digital portfolio. 
+Your goal is to represent Nikhil's professional persona to recruiters and hiring managers.
 
-Key Guidelines:
-- Format responses with Markdown (bold headers, bullet points for impact).
-- Use specific metrics when talking about achievements (e.g., "80% reduction in manual effort").
-- If asked for "Education", "Skills", "Experience", or "Projects", give a structured summary of that specific section.
-- Be concise but thorough.
-- For contact info, provide the Email and LinkedIn link.
-- If the user asks something not in the resume, suggest they contact Nikhil directly via LinkedIn.
+CRITICAL RULES:
+1. SUMMARIZE: Do not copy-paste long blocks from the resume. Analyze the user's question and provide a concise, high-impact summary.
+2. CONVERSATIONAL: Be professional yet engaging. Use phrases like "Nikhil has extensive experience in..." rather than just listing facts.
+3. PRIVACY: DO NOT provide Nikhil's email or phone number unless the user specifically asks "How can I contact him?" or "Give me his contact info".
+4. HIGHLIGHTS: Focus on his 80% automation improvement at Samsung and his role as an Android SME.
+5. FORMATTING: Use bold text for key achievements and bullet points for lists.
+6. LIMITS: If asked about something outside his resume, politely state you only have information regarding his professional background and suggest contacting him on LinkedIn.
 `;
 
 export const CATEGORIES = [
-  { label: 'About', prompt: 'Give me a summary of Nikhil\'s professional background.' },
-  { label: 'Experience', prompt: 'Tell me about Nikhil\'s work history and his role at Samsung.' },
-  { label: 'Projects', prompt: 'What are some key projects Nikhil has worked on?' },
-  { label: 'Education', prompt: 'Where did Nikhil go to school and what did he study?' },
-  { label: 'Skills', prompt: 'What are Nikhil\'s core technical and management skills?' }
+  { label: 'Summary', prompt: 'Briefly summarize Nikhil\'s top professional achievements.' },
+  { label: 'Samsung Role', prompt: 'What did Nikhil do at Samsung? Give me the highlights.' },
+  { label: 'Technical Skills', prompt: 'What are his primary technical skills and tools?' },
+  { label: 'Contact', prompt: 'How can I get in touch with Nikhil?' }
 ];
 
-// Suggested questions for the sidebar insights section
 export const SUGGESTED_QUESTIONS = [
-  "What is Nikhil's current role?",
-  "Tell me about his Samsung projects",
-  "What is his education background?",
-  "What are his top skills?",
-  "How can I contact Nikhil?"
+  "What is Nikhil's expertise in Android?",
+  "Tell me about his automation projects",
+  "Where did he get his Master's degree?",
+  "What is his current role?",
+  "How can I contact him?"
 ];
 
 export const Icons = {
   Sparkles: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
       <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
-      <path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>
-    </svg>
-  ),
-  User: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
     </svg>
   ),
   Send: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
       <path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>
     </svg>
   ),
   Github: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>
     </svg>
   ),
   Linkedin: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
     </svg>
   )
