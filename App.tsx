@@ -8,28 +8,29 @@ const App: React.FC = () => {
 
   const handleSuggest = (question: string) => {
     setInitialQuestion(question);
-    setTimeout(() => setInitialQuestion(undefined), 100);
+    // Short delay to allow the effect in ChatInterface to trigger
+    setTimeout(() => setInitialQuestion(undefined), 10);
   };
 
   return (
     <div className="flex h-screen w-full bg-[#f8fafd] overflow-hidden text-slate-900 selection:bg-blue-100">
       <Sidebar onSuggest={handleSuggest} />
       
-      <main className="flex-1 flex flex-col relative overflow-hidden">
+      <main className="flex-1 flex flex-col min-h-0 relative bg-[#f8fafd]">
         {/* Mobile Header */}
-        <header className="lg:hidden flex items-center justify-between p-5 bg-white border-b border-slate-100 sticky top-0 z-10 shadow-sm">
+        <header className="lg:hidden flex items-center justify-between p-4 bg-white border-b border-slate-100 z-10 shadow-sm flex-shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
-              <span className="text-sm font-bold text-white">NK</span>
+            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+              <span className="text-xs font-bold text-white uppercase">NK</span>
             </div>
-            <h1 className="text-lg font-bold tracking-tight text-slate-900">Nikhil AI</h1>
+            <h1 className="text-base font-bold tracking-tight text-slate-900">Nikhil AI</h1>
           </div>
           <a 
             href="https://www.linkedin.com/in/khurananikhil21" 
             target="_blank" 
-            className="text-[11px] font-bold text-blue-600 bg-blue-50 px-5 py-2.5 rounded-full border border-blue-100 transition-colors"
+            className="text-[10px] font-bold text-blue-600 bg-blue-50 px-4 py-2 rounded-full border border-blue-100 transition-colors uppercase tracking-wider"
           >
-            LinkedIn
+            Connect
           </a>
         </header>
 
