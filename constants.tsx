@@ -1,6 +1,4 @@
 
-import React from 'react';
-
 export const RESUME_DATA = `
 Nikhil Khurana
 Technical Project Manager | Android SME | Software Engineer
@@ -55,31 +53,30 @@ TECHNICAL SKILLS:
 `;
 
 export const SYSTEM_INSTRUCTION = `
-You are the AI Assistant for Nikhil Khurana's digital portfolio. 
-Your goal is to represent Nikhil's professional persona to recruiters and hiring managers.
+You are the professional AI Assistant for Nikhil Khurana. 
+Your primary goal is to provide concise, summarized answers based on his resume.
 
-CRITICAL RULES:
-1. SUMMARIZE: Do not copy-paste long blocks from the resume. Analyze the user's question and provide a concise, high-impact summary.
-2. CONVERSATIONAL: Be professional yet engaging. Use phrases like "Nikhil has extensive experience in..." rather than just listing facts.
-3. PRIVACY: DO NOT provide Nikhil's email or phone number unless the user specifically asks "How can I contact him?" or "Give me his contact info".
-4. HIGHLIGHTS: Focus on his 80% automation improvement at Samsung and his role as an Android SME.
-5. FORMATTING: Use bold text for key achievements and bullet points for lists.
-6. LIMITS: If asked about something outside his resume, politely state you only have information regarding his professional background and suggest contacting him on LinkedIn.
+BEHAVIORAL GUIDELINES:
+1. **Summarize Only**: Do not provide long lists or copy-paste large blocks of text. Provide a high-level overview and highlight the most impressive metrics (e.g., 80% effort reduction).
+2. **Contact Privacy**: NEVER show Nikhil's email or phone number unless the user explicitly asks for contact information or how to reach him.
+3. **Professional Persona**: Speak about Nikhil in the third person. Be encouraging, precise, and business-focused.
+4. **Formatting**: Use bold text for titles and key achievements. Use short bullet points for lists.
+5. **Context**: If asked a question about something not in the resume, admit you don't have that specific information and suggest connecting with Nikhil on LinkedIn for more details.
 `;
 
 export const CATEGORIES = [
-  { label: 'Summary', prompt: 'Briefly summarize Nikhil\'s top professional achievements.' },
-  { label: 'Samsung Role', prompt: 'What did Nikhil do at Samsung? Give me the highlights.' },
-  { label: 'Technical Skills', prompt: 'What are his primary technical skills and tools?' },
-  { label: 'Contact', prompt: 'How can I get in touch with Nikhil?' }
+  { label: 'Summary', prompt: 'Summarize Nikhil\'s career highlights in 3 sentences.' },
+  { label: 'Samsung Exp', prompt: 'Tell me briefly about his main impact at Samsung.' },
+  { label: 'Tech Stack', prompt: 'What are his top 5 technical skills?' },
+  { label: 'Contact', prompt: 'How can I contact Nikhil?' }
 ];
 
 export const SUGGESTED_QUESTIONS = [
-  "What is Nikhil's expertise in Android?",
-  "Tell me about his automation projects",
-  "Where did he get his Master's degree?",
-  "What is his current role?",
-  "How can I contact him?"
+  "Expertise in Android?",
+  "Samsung automation projects?",
+  "Education background?",
+  "Current role overview?",
+  "Contact information?"
 ];
 
 export const Icons = {
