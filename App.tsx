@@ -8,33 +8,38 @@ const App: React.FC = () => {
 
   const handleSuggest = (question: string) => {
     setInitialQuestion(question);
-    // Short delay to allow the effect in ChatInterface to trigger
+    // Short delay to reset the trigger
     setTimeout(() => setInitialQuestion(undefined), 10);
   };
 
   return (
-    <div className="flex h-screen w-full bg-[#f8fafd] overflow-hidden text-slate-900 selection:bg-blue-100">
+    <div className="flex h-full w-full bg-[#f8fafd] text-slate-900 overflow-hidden">
+      {/* Fixed Sidebar on Desktop */}
       <Sidebar onSuggest={handleSuggest} />
       
-      <main className="flex-1 flex flex-col min-h-0 relative bg-[#f8fafd]">
-        {/* Mobile Header */}
-        <header className="lg:hidden flex items-center justify-between p-4 bg-white border-b border-slate-100 z-10 shadow-sm flex-shrink-0">
+      <main className="flex-1 flex flex-col h-full min-w-0 relative">
+        {/* Mobile-Only Sticky Header */}
+        <header className="lg:hidden flex items-center justify-between px-5 py-4 bg-white border-b border-slate-100 z-30 flex-shrink-0 shadow-sm">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
-              <span className="text-xs font-bold text-white uppercase">NK</span>
+            <div className="w-8 h-8 rounded-xl bg-blue-600 flex items-center justify-center">
+              <span className="text-[10px] font-black text-white">NK</span>
             </div>
-            <h1 className="text-base font-bold tracking-tight text-slate-900">Nikhil AI</h1>
+            <h1 className="text-sm font-bold tracking-tight text-slate-800">Nikhil AI Assistant</h1>
           </div>
           <a 
             href="https://www.linkedin.com/in/khurananikhil21" 
             target="_blank" 
-            className="text-[10px] font-bold text-blue-600 bg-blue-50 px-4 py-2 rounded-full border border-blue-100 transition-colors uppercase tracking-wider"
+            rel="noreferrer"
+            className="text-[10px] font-bold text-blue-600 hover:text-blue-700 transition-colors uppercase tracking-widest"
           >
-            Connect
+            LinkedIn
           </a>
         </header>
 
-        <ChatInterface initialMessage={initialQuestion} />
+        {/* Chat window fills remaining space */}
+        <div className="flex-1 h-full min-h-0 relative">
+          <ChatInterface initialMessage={initialQuestion} />
+        </div>
       </main>
     </div>
   );
