@@ -1,5 +1,5 @@
 
-import { GoogleGenAI, GenerateContentResponse, Chat } from "@google/genai";
+import { GoogleGenAI, Chat } from "@google/genai";
 import { SYSTEM_INSTRUCTION, RESUME_DATA } from "../constants";
 
 // The API key is assumed to be in process.env.API_KEY
